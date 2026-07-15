@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-cosmic-bg: #02040a;
+  --color-cosmic-gold: #d4af37;
+  --color-cosmic-blue: #3a86ff;
+  --color-cosmic-purple: #8338ec;
+}
+
+/* High-fidelity glassmorphism panel styles - aligned with Editorial Aesthetic */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(12, 10, 5, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.03);
+}
+
+.glass-panel-blue {
+  background: rgba(5, 8, 15, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(58, 134, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(58, 134, 255, 0.03);
+}
+
+.glass-panel-purple {
+  background: rgba(10, 5, 15, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(131, 56, 236, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(131, 56, 236, 0.03);
+}
+
+/* Editorial Cinematic Labels */
+.cinematic-label {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.65;
+}
+
+.letter-spacing-huge {
+  letter-spacing: 0.8em;
+}
+
+/* Custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.01);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Stellar pulsing and breathing effects */
+@keyframes nebula-pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.08) rotate(10deg);
+    opacity: 0.85;
+  }
+}
+
+.animate-nebula {
+  animation: nebula-pulse 20s infinite ease-in-out;
+}
+
+/* Radial light glow behind content panels */
+.radial-glow-gold {
+  background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, rgba(0,0,0,0) 70%);
+}
+.radial-glow-blue {
+  background: radial-gradient(circle, rgba(58,134,255,0.06) 0%, rgba(0,0,0,0) 70%);
+}
+.radial-glow-purple {
+  background: radial-gradient(circle, rgba(131,56,236,0.06) 0%, rgba(0,0,0,0) 70%);
+}
+.radial-glow-crimson {
+  background: radial-gradient(circle, rgba(239,68,68,0.06) 0%, rgba(0,0,0,0) 70%);
+}
+.radial-glow-green {
+  background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, rgba(0,0,0,0) 70%);
+}
+
